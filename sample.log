@@ -1,0 +1,5 @@
+2026-10-03 09:12:01 INFO  Server started on port 8080
+2026-10-03 09:12:45 INFO  User login: user_1
+2026-10-03 09:47:10 ERROR Database connection failed
+2026-10-03 10:03:22 WARN  Slow response: 2300ms
+2026-10-03 10:15:09 ERROR Timeout while reading from socket

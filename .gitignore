@@ -55,6 +55,7 @@ compile_commands.json
 # Temporary files
 *.tmp
 *.log
+!sample.log
 *.bak
 *.swp
 
@@ -67,3 +68,4 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+*~
