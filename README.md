@@ -10,16 +10,17 @@ Requires g++ with C++17 support (Linux)
 ## Usage
 ```bash
 ./log_analyzer sample.log
+```
 
 ## Example output
 
 ```
-Total lines: 12
+Total lines: 5
 ```
 
 ## Roadmap
 
 - [x] Count lines
-- [] Count ERROR lines
-- [] Errors per hour
-- [] Summary by log level (INFO / WARN / ERROR)
+- [ ] Count ERROR lines
+- [ ] Errors per hour
+- [ ] Summary by log level (INFO / WARN / ERROR)
