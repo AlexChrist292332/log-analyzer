@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
 		line_count++;
 	}
 
-	std::cout << "The total number of lines in your log: " << line_count << "\n";
+	std::cout << "Total lines: " << line_count << "\n";
 	
 	return 0;
 }
