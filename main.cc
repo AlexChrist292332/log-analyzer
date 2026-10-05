@@ -16,9 +16,13 @@ int main(int argc, char* argv[]) {
 
 	std::string line; 
 	std::size_t line_count = 0;
+	std::string target = "ERROR";
 
 	while(std::getline(file, line)) {
 		line_count++;
+		if (line.find(target) != std::string::npos) {
+			std:: cout << "Error encountered at the line " << line_count << "\n\t" << line << "\n";
+		}	
 	}
 
 	std::cout << "Total lines: " << line_count << "\n";
