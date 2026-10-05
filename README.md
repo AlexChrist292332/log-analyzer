@@ -2,7 +2,7 @@
 A small command-line tool written in C++ that reads a log file and reports statistics about it. Built as a learning project
 
 ## Features
-- Counts the total number of lines in a log file
+- Counts the total number of lines and the total number of errors in a log file
 
 ## Build
 Requires g++ with C++17 support (Linux)
@@ -16,6 +16,7 @@ Requires g++ with C++17 support (Linux)
 
 ```
 Total lines: 5
+Total errors: 2
 ```
 
 ## Roadmap
