@@ -17,17 +17,24 @@ int main(int argc, char* argv[]) {
 	std::string line; 
 	std::size_t line_count = 0;
 	const std::string error_keyword = "ERROR";
+	const std::string warn_keyword = "WARN";
 	std::size_t error_count = 0;
+	std::size_t warn_count = 0;
+
 	while(std::getline(file, line)) {
 		++line_count;
 		if (line.find(error_keyword) != std::string::npos) {
 			std::cout << "Error encountered at the line " << line_count << "\n\t" << line << "\n";
 			++error_count;
+		} else if (line.find(warn_keyword) != std::string::npos) {
+			std::cout << "Warning encountered at the line " << line_count << "\n\t" << line << "\n";
+			++warn_count;
 		}	
 	}
 
-	std::cout << "Total lines: " << line_count << "\n";
 	std::cout << "Total errors: " << error_count << "\n";
-	
+	std::cout << "Total warnings: " << warn_count << "\n";
+	std::cout << "Total lines: " << line_count << "\n";
+
 	return 0;
 }
