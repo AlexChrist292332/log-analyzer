@@ -2,14 +2,8 @@
 #include <fstream>
 #include <string>
 
-std::string line;
-
-bool contains(std::string keyword) {
-	if (line.find(keyword) != std::string::npos) {
-		return true;
-	}
-	
-	return false;
+bool contains(const std::string& keyword, const std::string& line) {
+	return line.find(keyword) != std::string::npos;	
 }
 
 int main(int argc, char* argv[]) {
@@ -24,6 +18,7 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
+	std::string line;
 	std::size_t line_count = 0;
 
 	const std::string error_keyword = "ERROR";
@@ -36,13 +31,13 @@ int main(int argc, char* argv[]) {
 
 	while(std::getline(file, line)) {
 		++line_count;
-		if (contains(error_keyword)) {
+		if (contains(error_keyword, line)) {
 			std::cout << "Error at the line " << line_count << "\n\t" << line << "\n";
 			++error_count;
-		} else if (contains(warn_keyword)) {
+		} else if (contains(warn_keyword, line)) {
 			std::cout << "Warning at the line " << line_count << "\n\t" << line << "\n";
 			++warn_count;
-		} else if (contains(info_keyword)) {
+		} else if (contains(info_keyword, line)) {
 			++info_count;
 		}
 		
